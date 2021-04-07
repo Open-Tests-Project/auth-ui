@@ -1,0 +1,50 @@
+@import "reset";
+@import "colors";
+@import "font";
+
+$dots-container-width: calc(45vw);
+$dot-width: calc(10vw);
+
+body {
+    background: $bg-color;
+    height: 100vh;
+    color: $font-color;
+}
+
+
+header {
+    background: $header-color;
+    color: $bg-color;
+    padding: 20px 5px;
+}
+
+.dots-container {
+    background: $green-primary;
+    width: $dots-container-width;
+    height: $dots-container-width;
+    max-width: 450px;
+    max-height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+.dots-container table {
+    width: 100%;
+    height: inherit;
+    max-height: 450px;
+    td {
+        text-align: center;
+    }
+}
+.dot {
+    background: $green-secondary;
+    border-radius: 50%;
+    display: inline-block;
+    height: $dot-width;
+    width: $dot-width;
+    max-height: 100px;
+    max-width: 100px;
+}
+.dot:hover {
+    background: $bg-color;
+}
