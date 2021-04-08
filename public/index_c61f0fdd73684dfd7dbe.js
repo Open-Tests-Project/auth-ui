@@ -1,2 +1,0 @@
-(()=>{var o={279:o=>{o.exports={APP_NAME:"auth-ui"}}},t={};function r(i){var e=t[i];if(void 0!==e)return e.exports;var a=t[i]={exports:{}};return o[i](a,a.exports,r),a.exports}(()=>{"use strict";var o=r(279);if(!localStorage.getItem(o.APP_NAME+"token")){var t=location.host.split("/");t.push("signin"),location=location.protocol+"//"+t.join("/")}})()})();
-//# sourceMappingURL=index_c61f0fdd73684dfd7dbe.js.map
