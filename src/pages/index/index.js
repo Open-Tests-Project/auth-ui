@@ -10,7 +10,13 @@ if (!token) {
     return;
 }
 var session = jwt_decode(token);
+
 document.querySelector("i").innerText = session.email;
+document.querySelector("#scope").innerText = session.scope;
+document.querySelector("#role").innerText = session.role;
+document.querySelector("#issued").innerText = new Date(session.iat * 1000);
+document.querySelector("#expire").innerText = new Date(session.expire * 1000);
+
 var a = document.createElement("button");
 a.innerText = "logout";
 a.addEventListener("click", function () {
