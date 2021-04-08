@@ -1,1 +1,36 @@
 @import "src/style/index";
+
+
+main {
+  background: $white;
+  box-shadow:
+          0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+          0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+          0 12.5px 10px rgba(0, 0, 0, 0.06),
+          0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+          0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+          0 100px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+form {
+  text-align: center;
+  height: 100%;
+}
+
+input {
+  height: 42px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  border: none;
+  background: #e9e9eb;
+  width: 80%;
+  margin: 10px;
+}
+input[type="submit"] {
+  background: $bg-color;
+  color: $white;
+}

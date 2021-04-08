@@ -40,3 +40,19 @@ form.addEventListener("submit", function (event) {
 
 
 });
+
+
+var main = document.querySelector("main");
+
+window.addEventListener("resize", resize);
+
+function resize () {
+
+    var mainHeight = (window.innerHeight * 80) / 100;
+    var mainWidth = mainHeight / 1.61;
+    main.style.height = mainHeight + "px";
+    main.style.width = mainWidth + "px";
+    document.body.style.paddingTop = ((window.innerHeight - mainHeight) / 3) + "px";
+    console.log(window.innerHeight, mainHeight)
+}
+resize();
