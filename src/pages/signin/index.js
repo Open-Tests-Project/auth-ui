@@ -26,9 +26,7 @@ form.addEventListener("submit", function (event) {
             console.log(response.data);
             try {
                 localStorage.setItem(constants.APP_NAME+"token", response.data.token);
-                var segments = location.href.split("/");
-                segments.pop();
-                location = segments.join("/");
+                location = LANDING_PAGE;
             } catch (e) {}
             })
             .catch(function (error) {

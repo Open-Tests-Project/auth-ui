@@ -6,6 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var config = require(path.resolve(process.cwd(), "config"));
+var webpack = require("webpack");
 
 var paths = {
     src: path.resolve(__dirname, "src"),
@@ -114,6 +115,9 @@ module.exports = function (env) {
             new CleanWebpackPlugin(),
             new MiniCssExtractPlugin({
                 filename: "[name]_[contenthash].css"
+            }),
+            new webpack.DefinePlugin({
+                LANDING_PAGE: JSON.stringify(`${config.LANDING_PAGE}`)
             })
         ].concat(htmlWebpackPluginCollection)
     }
