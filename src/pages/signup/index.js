@@ -18,7 +18,7 @@ form.addEventListener("submit", function (event) {
 
 
     axios({
-    url: "http://simonedev/myapi/signup",
+    url: this.action,
     method: "post",
     data: payload})
             .then(function (response) {
