@@ -5,6 +5,7 @@ var fs = require('fs');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var { CleanWebpackPlugin } = require('clean-webpack-plugin');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var config = require(path.resolve(process.cwd(), "config"));
 
 var paths = {
     src: path.resolve(__dirname, "src"),
@@ -34,6 +35,10 @@ module.exports = function (env) {
 
     const IS_PROD = (env && env.production) ? true : false;
     const MODE = IS_PROD ? "production" : "development";
+
+    if (IS_PROD && config.PRODUCTION_PUBLIC_PATH) {
+        paths.public = config.PRODUCTION_PUBLIC_PATH;
+    }
 
     var htmlWebpackPluginCollection = PAGES.map(function (page) {
 
