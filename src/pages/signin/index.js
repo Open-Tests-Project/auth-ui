@@ -56,3 +56,15 @@ function resize () {
     console.log(window.innerHeight, mainHeight)
 }
 resize();
+
+
+
+[].forEach.call(document.querySelectorAll(".input-effect input"), function (input) {
+    input.addEventListener("focusout", function () {
+        if (this.value) {
+            this.classList.add("has-content");
+        } else {
+            this.classList.remove("has-content");
+        }
+    })
+});

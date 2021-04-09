@@ -12,6 +12,7 @@ main {
           0 100px 80px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   margin: 0 auto;
+  max-width: 80%;
   text-align: center;
 }
 
@@ -19,18 +20,67 @@ main {
 form {
   text-align: center;
   height: 100%;
+  padding: 20% 10%;
 }
 
 input {
   height: 42px;
-  border: 1px solid lightgray;
+  border: 1px solid #e9e9eb;
   border-radius: 3px;
+  width: 100%;
+}
+input:focus {
   border: none;
   background: #e9e9eb;
-  width: 80%;
-  margin: 10px;
+  transition: background-color .3s ease-out;
 }
+
 input[type="submit"] {
   background: $bg-color;
   color: $white;
 }
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+
+//https://codepen.io/Zhekaa/pen/vPMwrQ
+.col-3{
+  position: relative;
+  margin: 5% 0;
+} /* necessary to give position: relative to parent. */
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+
+.effect-22 {
+  border: 0;
+  padding: 7px 15px;
+  border: 1px solid #ccc;
+  position: relative;
+  background: transparent;
+}
+
+.effect-22 ~ label{
+  position: absolute;
+  left: 18px;
+  width: 100%;
+  top: 9px;
+  transition: all .3s ease-out;
+  pointer-events: none;
+  text-align: left;
+  color: #666668;
+  //z-index: -1;
+  letter-spacing: 0.5px;
+  font-size: .9rem;
+}
+.effect-22:focus ~ label, .has-content.effect-22 ~ label{
+  top: -24px;
+  left: 0;
+  font-size: .8rem;
+}
+
