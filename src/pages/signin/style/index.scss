@@ -1,6 +1,15 @@
 @import "src/style/index";
 
 
+:root {
+  --main-height: 80vh;
+  --golden-ratio: 1.618
+}
+
+body {
+  padding-top: 7vh;
+}
+
 main {
   background: $white;
   box-shadow:
@@ -16,6 +25,8 @@ main {
   min-height: 400px;
   min-width: 245px;
   text-align: center;
+  height: var(--main-height);
+  width: calc(var(--main-height) / var(--golden-ratio));
 }
 
 
