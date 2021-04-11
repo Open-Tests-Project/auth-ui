@@ -40,6 +40,7 @@ input:focus {
 input[type="submit"] {
   background: $bg-color;
   color: $white;
+  -webkit-appearance: none;
 }
 input[type="submit"]:hover {
   cursor: pointer;
