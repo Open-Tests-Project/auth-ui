@@ -19,7 +19,7 @@ form.addEventListener("submit", function (event) {
 
     axios({
     url: this.action,
-    method: "post",
+    method: this.method,
     data: payload})
             .then(function (response) {
                 // handle success

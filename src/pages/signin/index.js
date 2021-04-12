@@ -18,7 +18,7 @@ form.addEventListener("submit", function (event) {
 
     axios({
     url: this.action,
-    method: "post",
+    method: this.method,
     data: payload})
             .then(function (response) {
                 // handle success
@@ -56,12 +56,15 @@ form.addEventListener("submit", function (event) {
 
 
 
+function toggleInputClass () {
+    if (this.value) {
+        this.classList.add("has-content");
+    } else {
+        this.classList.remove("has-content");
+    }
+}
+
 [].forEach.call(document.querySelectorAll(".input-effect input"), function (input) {
-    input.addEventListener("focusout", function () {
-        if (this.value) {
-            this.classList.add("has-content");
-        } else {
-            this.classList.remove("has-content");
-        }
-    })
+    input.addEventListener("focusout", toggleInputClass);
+    toggleInputClass.call(input);
 });
