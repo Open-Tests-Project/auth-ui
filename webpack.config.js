@@ -117,7 +117,8 @@ module.exports = function (env) {
                 filename: "[name]_[contenthash].css"
             }),
             new webpack.DefinePlugin({
-                LANDING_PAGE: JSON.stringify(`${config.LANDING_PAGE}`)
+                LANDING_PAGE: JSON.stringify(`${config.LANDING_PAGE}`),
+                LOGIN_PAGE: JSON.stringify(`${config.LOGIN_PAGE}`)
             })
         ].concat(htmlWebpackPluginCollection)
     }
