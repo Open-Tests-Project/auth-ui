@@ -53,7 +53,10 @@ module.exports = function (env) {
         return new HtmlWebpackPlugin({
             template: path.resolve(paths.src, "pages", page, "html.ejs"),
             chunks: [page],
-            filename: filename
+            filename: filename,
+            templateParameters: {
+                "base_url": config.BASE_URL
+            }
         });
     
     });
